@@ -6,7 +6,7 @@ Neuro load reduction on video stream for kids, written in C++:
 
 
  
-The project is build with CMakeLists and the required libraries are FFmpeg, OpenCV, glfw, miniaudio.
+Project is build with CMakeLists and the required libraries are FFmpeg, OpenCV, glfw, miniaudio.
 
 # Key points of the project:
 - Design and Architecture of the application.
