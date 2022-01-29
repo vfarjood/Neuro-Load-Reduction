@@ -8,8 +8,8 @@ Neuro load reduction on video stream for kids, written in C++:
 The project is build with CMakeLists and the required libraries are FFmpeg, OpenCV, glfw, miniaudio.
 
 # Key points of the project:
-- The architecture and integration of different portions of the application.
-- Useage of different design patterns for different purposes (builder or factory design, singleton).
+- Design and Architecture of the application.
+- Different design patterns (builder or factory design, singleton).
 - Scaleability and modularity which will allow developers to add some more features easily.
 - Logger class which will provide all the needs of a proper logging service.
 - Provided command-line user interface in order to change some parameters(change detector param, change remover param, file location, …).
