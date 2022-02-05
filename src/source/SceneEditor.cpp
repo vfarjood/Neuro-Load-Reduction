@@ -22,7 +22,7 @@ SceneEditor::~SceneEditor()
 }
 	
 
-uint8_t* SceneEditor::updateFrame2(uint8_t* frame1, uint8_t* frame2, int const& step)
+uint8_t* SceneEditor::updateFrame2(uint8_t* frame1, uint8_t* frame2, int const step)
 {	
 
 	for( int x = 1; x < m_height; x+=step ) {
@@ -47,7 +47,7 @@ uint8_t* SceneEditor::updateFrame1(uint8_t* frame1, uint8_t* frame2)
 		}
 	return frame1;
 }
-uint8_t* SceneEditor::updateFrame(uint8_t* frame, double const& alpha, int const& beta)
+uint8_t* SceneEditor::updateFrame(uint8_t* frame, double const& alpha, int const beta)
 {	
 	for( int x = 1; x < m_height; x++ ) {
 		for( int y = 0; y < m_width; y++ ) {
@@ -83,7 +83,7 @@ void SceneEditor::frameAverage(std::vector<uint8_t*>& video, std::vector<double>
 	}
 }
 
-void SceneEditor::sceneDetector(std::vector<uint8_t*>& video, int const& width, int const& height, int const& threshold)
+void SceneEditor::sceneDetector(std::vector<uint8_t*>& video, int const width, int const height, int const threshold)
 {
 	m_width = width;
     m_height = height;
@@ -120,7 +120,7 @@ void SceneEditor::sceneSplitter(std::vector<cv::Mat> const& framesVector, std::s
 
 }
 
-void SceneEditor::sceneReplacer(std::vector<uint8_t*>& video, std::string const& option, int const& reduce_level, int const& fps)
+void SceneEditor::sceneReplacer(std::vector<uint8_t*>& video, std::string const& option, int const reduce_level, int const fps)
 {	
 	int num_of_scene_reduced=0;
 	bool previous_scene_was_reduced = false;
