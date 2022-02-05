@@ -43,19 +43,19 @@ public:
 	SceneEditor();
 	~SceneEditor();
 	
-	uint8_t* updateFrame(uint8_t* frame, double const& alpha, int const& beta);
+	uint8_t* updateFrame(uint8_t* frame, double const alpha, int const beta);
 	uint8_t* updateFrame1(uint8_t* frame1, uint8_t* frame2);
-	uint8_t* updateFrame2(uint8_t* frame1, uint8_t* frame2, int const& step);
+	uint8_t* updateFrame2(uint8_t* frame1, uint8_t* frame2, int const step);
 
 	double findFrameAverage(uint8_t* frame);
 
 	void frameAverage(std::vector<uint8_t*>& video, std::vector<double> &framesAverage);
 
-	void sceneDetector(std::vector<uint8_t*>& video, int const& width, int const& height, int const& threshold);
+	void sceneDetector(std::vector<uint8_t*>& video, int const width, int const height, int const threshold);
 
 	void sceneSplitter(std::vector<cv::Mat> const& framesVector, std::string const& outputDir);
 
-	void sceneReplacer(std::vector<uint8_t*>& video, std::string const& option, int const& reduce_level, int const& fps);
+	void sceneReplacer(std::vector<uint8_t*>& video, std::string const& option, int const reduce_level, int const fps);
 
 	void sceneRemover(std::vector<cv::Mat> const& inVector, std::vector<cv::Mat>* const& outPtrVector);
 
