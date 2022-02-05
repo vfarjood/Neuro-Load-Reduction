@@ -21,7 +21,7 @@ VideoEditor::~VideoEditor()
 	LOG_DEBUG("VideoEditor:   Destructor  of the object: ", this);
 }
 
-void VideoEditor::initialize(int const& width, int const& height, std::vector<uint8_t*> const& video, int const& fps)
+void VideoEditor::initialize(int const width, int const height, std::vector<uint8_t*> const& video, int const fps)
 {
 	m_framewidth = width;
   	m_frameheight = height;
@@ -67,7 +67,7 @@ void VideoEditor::exportFrames(std::vector<uint8_t*> const& video, std::string c
 
 }
 
-void VideoEditor::splitVideoManual(std::vector<uint8_t*> const& video, std::string const& outputDir, int const& partNumber)
+void VideoEditor::splitVideoManual(std::vector<uint8_t*> const& video, std::string const& outputDir, int const partNumber)
 {
 	std::vector<cv::Mat> framesVector;
 	framesVector.reserve(m_size);
@@ -92,7 +92,7 @@ void VideoEditor::splitVideoManual(std::vector<uint8_t*> const& video, std::stri
 
 }
 
-void VideoEditor::splitVideoAuto(std::vector<uint8_t*>& video, std::string const& outputDir, int const& threshold)
+void VideoEditor::splitVideoAuto(std::vector<uint8_t*>& video, std::string const& outputDir, int const threshold)
 {
 	scene.sceneDetector(video, m_framewidth, m_frameheight, threshold);
 
@@ -106,7 +106,7 @@ void VideoEditor::splitVideoAuto(std::vector<uint8_t*>& video, std::string const
 	}
 }
 
-void VideoEditor::reduceScenceAuto(std::vector<uint8_t*>& video, std::string const& option, int const& threshold, int const& reduce_level)
+void VideoEditor::reduceScenceAuto(std::vector<uint8_t*>& video, std::string const& option, int const threshold, int const reduce_level)
 {
 	scene.sceneDetector(video, m_framewidth, m_frameheight, threshold);
 	scene.sceneReplacer(video, option, reduce_level, m_fps);	
