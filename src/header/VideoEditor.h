@@ -50,7 +50,7 @@ public:
 	//----------------------------------------//
 				/*** Methods ***/
 	//----------------------------------------//
-	void initialize(int const& width, int const& height, std::vector<uint8_t*> const& video, int const& fps);
+	void initialize(int const width, int const height, std::vector<uint8_t*> const& video, int const fps);
 	
 	std::vector<cv::Mat> convertToMAT(std::vector<uint8_t*> const& video);
 	
@@ -60,11 +60,11 @@ public:
 
 	void saveVideo(std::vector<uint8_t*> const& video, std::string const& outputDir);
 
-	void splitVideoManual(std::vector<uint8_t*> const& video, std::string const& outputDir, int const& partNumber);
+	void splitVideoManual(std::vector<uint8_t*> const& video, std::string const& outputDir, int const partNumber);
 	
-	void splitVideoAuto(std::vector<uint8_t*>& video, std::string const& outputDir, int const& threshold);
+	void splitVideoAuto(std::vector<uint8_t*>& video, std::string const& outputDir, int const threshold);
 
-	void reduceScenceAuto(std::vector<uint8_t*>& video, std::string const& option, int const& threshold, int const& reduce_level);
+	void reduceScenceAuto(std::vector<uint8_t*>& video, std::string const& option, int const threshold, int const reduce_level);
 
 	size_t size();
 
